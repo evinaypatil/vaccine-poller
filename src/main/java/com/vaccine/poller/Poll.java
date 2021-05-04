@@ -20,8 +20,13 @@ public class Poll {
     /**
      * Object mapper instance.
      */
-    public static final ObjectMapper MAPPER = new ObjectMapper()
+    private static final ObjectMapper MAPPER = new ObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+    /**
+     * Poll time.
+     */
+    private static final int POLL_TIME_SECONDS = 60;
 
     /**
      * Check if vaccine is available.
