@@ -21,3 +21,5 @@ b) 24-05-2021,294,45,paid - Fetches 7 days data starting from 24-30th may 2021 (
 
 If there is vaccine availability, the program prints the vaccination center(s) details, and terminates.
 ```
+
+Note: There might be bugs in the poller. So please use the utility and rely on it at your own risk.
