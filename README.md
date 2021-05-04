@@ -19,5 +19,5 @@ Examples:
 a) 05-05-2021,294,18      - Fetches 7 days data starting from 5-11th may 2021 (7 days), check if there is FREE/PAID vaccine availability in district 294 for 18 age limit
 b) 24-05-2021,294,45,paid - Fetches 7 days data starting from 24-30th may 2021 (7 days), check if there is PAID vaccine availability in district 294 for 45 age limit
 
-If there is match available, the program prints the vaccinationc enter details, and terminates.
+If there is vaccine availability, the program prints the vaccination center(s) details, and terminates.
 ```
