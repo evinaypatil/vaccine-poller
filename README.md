@@ -23,3 +23,6 @@ If there is vaccine availability, the program prints the vaccination center(s) d
 ```
 
 Note: There might be bugs in the poller. So please use the utility and rely on it at your own risk.
+
+Output:
+![image](https://user-images.githubusercontent.com/64588033/116989654-a4fae780-acef-11eb-9437-f11991c80360.png)
