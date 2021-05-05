@@ -5,12 +5,14 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.primitives.Ints;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * Polls for vaccine availability.
@@ -85,6 +87,10 @@ public class Poll {
         // If unavailable, print message.
         if (!available) {
             System.out.println("No vaccine available week starting at (Date = " + date + ", age limit = " + min_age_limit + " and fee type = " + (feeType == null ? "free/paid" : feeType) + ")");
+        } else {
+            IntStream.range(0, 10000).forEach(n ->
+                    Toolkit.getDefaultToolkit().beep()
+            );
         }
 
         return available;
@@ -122,15 +128,13 @@ public class Poll {
         }
 
         // Loop and check.
-        var flag = true;
-        while (flag) {
+        while (true) {
             System.out.println("**********************" + new Date() + "*************************");
             for (VaccineArg arg : vaccineArgs) {
 
                 // If there is a hit, break.
                 if (check(arg.getDate(), arg.getDistrictId(), arg.getAgeLimit(), arg.getFeeType())) {
-                    flag = false;
-                    break;
+                    System.exit(0);
                 }
             }
             System.out.println("***************************************************************************");
