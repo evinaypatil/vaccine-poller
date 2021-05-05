@@ -131,11 +131,7 @@ public class Poll {
         while (true) {
             System.out.println("**********************" + new Date() + "*************************");
             for (VaccineArg arg : vaccineArgs) {
-
-                // If there is a hit, break.
-                if (check(arg.getDate(), arg.getDistrictId(), arg.getAgeLimit(), arg.getFeeType())) {
-                    System.exit(0);
-                }
+                check(arg.getDate(), arg.getDistrictId(), arg.getAgeLimit(), arg.getFeeType());
             }
             System.out.println("***************************************************************************");
             System.out.println("");
